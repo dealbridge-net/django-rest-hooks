@@ -179,11 +179,7 @@ def get_model_label(instance):
 
 
 @receiver(post_save, dispatch_uid='instance-saved-hook')
-def model_saved(sender, instance,
-                        created,
-                        raw,
-                        using,
-                        **kwargs):
+def model_saved(sender, instance, created, *args, **kwargs):
     """
     Automatically triggers "created" and "updated" actions.
     """
@@ -193,9 +189,7 @@ def model_saved(sender, instance,
 
 
 @receiver(post_delete, dispatch_uid='instance-deleted-hook')
-def model_deleted(sender, instance,
-                          using,
-                          **kwargs):
+def model_deleted(sender, instance, *args, **kwargs):
     """
     Automatically triggers "deleted" actions.
     """
