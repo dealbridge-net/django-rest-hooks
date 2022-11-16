@@ -1,2 +1,2 @@
 -r devrequirements.txt
-Django>=1.7,<1.8
+Django==4.0.7
